@@ -1,10 +1,11 @@
-pipeline {
+ pipeline {
     agent any
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/rohandhenge/L1-cicd-project'
+                git branch: 'main',
+                    url: 'https://github.com/rohandhenge/L1-cicd-project'
             }
         }
 
